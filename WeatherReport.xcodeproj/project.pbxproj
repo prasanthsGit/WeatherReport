@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9F1FE27F25F0204D007C4524 /* DBHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F1FE27E25F0204D007C4524 /* DBHelper.swift */; };
+		9F1FE28425F0208C007C4524 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F1FE28325F0208C007C4524 /* User.swift */; };
 		9F929B7325EFDE5E00987653 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F929B7225EFDE5E00987653 /* AppDelegate.swift */; };
 		9F929B7525EFDE5E00987653 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F929B7425EFDE5E00987653 /* SceneDelegate.swift */; };
 		9F929B7725EFDE5E00987653 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F929B7625EFDE5E00987653 /* LoginViewController.swift */; };
@@ -42,6 +44,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9F1FE27E25F0204D007C4524 /* DBHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBHelper.swift; sourceTree = "<group>"; };
+		9F1FE28325F0208C007C4524 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		9F929B6F25EFDE5E00987653 /* WeatherReport.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeatherReport.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F929B7225EFDE5E00987653 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9F929B7425EFDE5E00987653 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -117,6 +121,8 @@
 				9F929B7425EFDE5E00987653 /* SceneDelegate.swift */,
 				9F929B7625EFDE5E00987653 /* LoginViewController.swift */,
 				9F929BB125EFECD600987653 /* SignUpViewController.swift */,
+				9F1FE27E25F0204D007C4524 /* DBHelper.swift */,
+				9F1FE28325F0208C007C4524 /* User.swift */,
 				9F929BB625EFF78B00987653 /* ListUsersViewController.swift */,
 				9F929BBB25EFFA2800987653 /* WeatherDetailsViewController.swift */,
 				9F929BC025EFFF3300987653 /* UserTableViewCell.swift */,
@@ -285,9 +291,11 @@
 				9F929B7325EFDE5E00987653 /* AppDelegate.swift in Sources */,
 				9F929BC225EFFF3300987653 /* UserTableViewCell.swift in Sources */,
 				9F929BBC25EFFA2800987653 /* WeatherDetailsViewController.swift in Sources */,
+				9F1FE27F25F0204D007C4524 /* DBHelper.swift in Sources */,
 				9F929BB225EFECD600987653 /* SignUpViewController.swift in Sources */,
 				9F929BB725EFF78B00987653 /* ListUsersViewController.swift in Sources */,
 				9F929B7525EFDE5E00987653 /* SceneDelegate.swift in Sources */,
+				9F1FE28425F0208C007C4524 /* User.swift in Sources */,
 				9F929BC925F0016600987653 /* WeatherDetailsTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

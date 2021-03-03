@@ -15,6 +15,7 @@ class WeatherDetailsViewController: UIViewController {
         super.viewDidLoad()
 
         weatherList.register(UINib(nibName: "WeatherDetailsTableViewCell", bundle: nil), forCellReuseIdentifier: "WeatherDetailsTableViewCell")
+        self.navigationController?.setNavigationBarHidden(true, animated: false)
     }
     
     @IBAction func backAction(_ sender : UIButton) {
@@ -22,6 +23,7 @@ class WeatherDetailsViewController: UIViewController {
     }
     
     @IBAction func logoutAction(_ sender : UIButton) {
+        UserDefaults.standard.setValue(false, forKey: "isLoggedIn")
         self.navigationController?.popToRootViewController(animated: false)
     }
 }
