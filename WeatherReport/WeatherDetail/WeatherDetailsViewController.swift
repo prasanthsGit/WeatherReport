@@ -23,6 +23,24 @@ class WeatherDetailsViewController: UIViewController {
     }
     
     @IBAction func logoutAction(_ sender : UIButton) {
+
+        let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let initialViewController = mainStoryboard.instantiateViewController(withIdentifier: "LoginViewController") as! LoginViewController
+        
+        // iOS13 or later
+        if #available(iOS 13.0, *) {
+            let sceneDelegate = UIApplication.shared.connectedScenes
+                .first!.delegate as! SceneDelegate
+            
+            sceneDelegate.window!.rootViewController = initialViewController
+
+        // iOS12 or earlier
+        } else {
+            // UIApplication.shared.keyWindow?.rootViewController
+            let appDelegate = UIApplication.shared.delegate as! AppDelegate
+            appDelegate.window!.rootViewController = initialViewController
+        }
+        
         UserDefaults.standard.setValue(false, forKey: "isLoggedIn")
         self.navigationController?.popToRootViewController(animated: false)
     }

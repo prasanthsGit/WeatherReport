@@ -69,8 +69,10 @@ extension ListUsersViewController : UITableViewDelegate, UITableViewDataSource {
         print("editing style called")
         if (editingStyle == .delete) {
             if (editingStyle == UITableViewCell.EditingStyle.delete) {
-                db.deleteByID(id: users[indexPath.row].id)
-                getDbData()
+                if users.count > 0 {
+                    db.deleteByID(id: users[indexPath.row].id)
+                    getDbData()
+                }
             }
         }
     }

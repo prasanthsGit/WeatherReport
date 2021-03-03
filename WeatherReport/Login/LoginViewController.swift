@@ -18,11 +18,12 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         users = db.read()
-        if UserDefaults.standard.value(forKey: "isLoggedIn") as? Bool ?? false && users.count > 0 {
-            let vc = self.storyboard?.instantiateViewController(withIdentifier: "ListUsersViewController") as! ListUsersViewController
-            self.navigationController?.pushViewController(vc, animated: true)
-        }
         addDoneButtonOnKeyboard()
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        emailTextField.text = ""
+        passwordTextField.text = ""
     }
     
     func addDoneButtonOnKeyboard(){

@@ -39,6 +39,15 @@ class SignUpViewController: UIViewController {
         self.navigationController?.setNavigationBarHidden(true, animated: false)
     }
     
+    override func viewDidDisappear(_ animated: Bool) {
+        firstNameTextField.text = ""
+        lastNameTextField.text = ""
+        emilTextField.text = ""
+        genderTextField.text = ""
+        passwordextField.text = ""
+        confirmPasswordTextField.text = ""
+    }
+
     
     func addDoneButtonOnKeyboard(){
         let doneToolbar: UIToolbar = UIToolbar(frame: CGRect.init(x: 0, y: 0, width: UIScreen.main.bounds.width, height: 50))
