@@ -26,3 +26,32 @@ class User
     }
     
 }
+
+class WeatherModel : Codable {
+    var daily : [WeatherData]
+}
+
+class WeatherData : Codable {
+    var temp : tempModel?
+    var weatherType: [WeatherDetails]
+    var humidity: Double?
+    var windSpeed: Double?
+    
+    enum CodingKeys: String, CodingKey {
+        case temp
+        case weatherType = "weather"
+        case windSpeed = "wind_speed"
+        case humidity
+    }
+}
+
+class tempModel: Codable {
+    var min: Double?
+    var max: Double?
+}
+
+class WeatherDetails: Codable {
+    var main: String?
+    var description: String?
+}
+

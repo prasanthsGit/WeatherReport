@@ -52,6 +52,8 @@ class LoginViewController: UIViewController {
     }
     
     func isUserHadAccount() {
+        print("textfield text -->",emailTextField.text ?? "" )
+        print("user count -->\(users.count)")
         let res = users.filter { $0.email == emailTextField.text}
         if res.count == 0 {
             showAlert(with: "You dont have an account please signup")
